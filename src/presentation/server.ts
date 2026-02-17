@@ -1,8 +1,12 @@
 import { url } from 'inspector';
 import { CheckService } from '../domain/use-cases/checks/check-service';
 import { CronService } from './cron/cron-service';
+import { LogRepositoryImpl } from '../infrastructure/repositories/log.repository.impl';
+import { FileSystemDatasource } from '../infrastructure/datasources/file-system.datasorce';
 
-
+const fileSystemRepository = new LogRepositoryImpl(
+    new FileSystemDatasource()
+)
 
 export class Server {
     public static start() {
@@ -12,6 +16,7 @@ export class Server {
             () => {
                 const url = 'https://www.google.com'
                 new CheckService(
+                    fileSystemRepository,
                     () => console.log(`${url} is ok`),
                     (error) => console.log(`${url} is not ok: ${error}`)
 
