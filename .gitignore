@@ -3,5 +3,8 @@ node_modules/
 dist/
 
 .env
-# Logs
+#Logs
 .DS_Store
+
+#Mongo
+mongo/

@@ -374,3 +374,4 @@
 {"message":"Service https://www.google.com working","level":"low","createdAt":"2026-02-18T08:55:30.324Z","origin":"check-service.ts"}
 {"message":"Email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es with subject Logs from NOC","level":"low","createdAt":"2026-02-18T12:05:50.568Z","origin":"email.service.ts"}
 {"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-18T12:49:07.936Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-18T23:15:48.766Z","origin":"send-email-logs.ts"}
