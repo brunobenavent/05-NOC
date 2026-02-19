@@ -22,7 +22,7 @@ async function main() {
     });
     const adapter = new PrismaPg(pool);
     const prisma = new PrismaClient({ adapter });
-    const newLog = await LogModel.create({
+   /*  const newLog = await prisma.logModel.create({
         data: {
             level: 'HIGH',
             message: 'test message',
@@ -30,10 +30,18 @@ async function main() {
         }
 
     })
+    console.log(newLog) */
+
+    const logs = await prisma.logModel.findMany({
+        where: {
+            level: 'MEDIUM'
+        }
+    })
+    console.log(logs)
 
     Server.start();
 
-    const logs = await LogModel.find()
+    // const logs = await LogModel.find()
 
     console.log(logs)
 
