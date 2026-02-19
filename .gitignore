@@ -6,5 +6,8 @@ dist/
 #Logs
 .DS_Store
 
-#Mongo
+
 /mongo
+/postgres
+
+/generated/prisma

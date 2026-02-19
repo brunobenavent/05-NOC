@@ -13,4 +13,8 @@ PROD=false
 ´´´
 
 3. Ejecutar el comando ```npm install```
-4. Ejecutar el comando ```npm run dev```
+4. Levantar las BBDD con el comando
+    ```
+    docker compose up -d
+    ```
+5. Ejecutar el comando ```npm run dev```

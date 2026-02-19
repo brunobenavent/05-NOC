@@ -12,17 +12,22 @@
   "author": "Bruno Benavent",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.5.7",
+    "@types/node": "^20.19.33",
     "@types/nodemailer": "^7.0.10",
+    "@types/pg": "^8.16.0",
+    "prisma": "^7.4.0",
     "rimraf": "^5.0.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.4.0",
+    "@prisma/client": "^7.4.0",
     "cron": "^2.4.4",
     "dotenv": "^17.3.1",
     "env-var": "^7.5.0",
     "mongoose": "^9.2.1",
-    "nodemailer": "^8.0.1"
+    "nodemailer": "^8.0.1",
+    "pg": "^8.18.0"
   }
 }
