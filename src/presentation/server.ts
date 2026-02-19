@@ -5,9 +5,11 @@ import { LogRepositoryImpl } from '../infrastructure/repositories/log.repository
 import { FileSystemDatasource } from '../infrastructure/datasources/file-system.datasorce';
 import { EmailService } from './email/email.service';
 import { SendEmailLogs } from '../domain/use-cases/email/send-email-logs';
+import { MongoLogDatasource } from '../infrastructure/datasources/mongo-log.datasource';
 
-const fileSystemRepository = new LogRepositoryImpl(
-    new FileSystemDatasource()
+const logRepository = new LogRepositoryImpl(
+    //new FileSystemDatasource()
+    new MongoLogDatasource()
 )
 const emailService =  new EmailService()
 export class Server {
@@ -16,14 +18,14 @@ export class Server {
         console.log("Server is running…")
         //send email
          
-        new SendEmailLogs(emailService, fileSystemRepository).execute(['brunobenavent@gmail.com', 'comunicacion@viverosguzman.es'])
+        new SendEmailLogs(emailService, logRepository).execute(['brunobenavent@gmail.com', 'comunicacion@viverosguzman.es'])
         
         // CronService.createJob(
         //     '*/5 * * * * *',
         //     () => {
         //         const url = 'https://www.google.com'
         //         new CheckService(
-        //             fileSystemRepository,
+        //             logRepository,
         //             () => console.log(`${url} is ok`),
         //             (error) => console.log(`${url} is not ok: ${error}`)
 

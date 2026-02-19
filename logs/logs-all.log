@@ -375,3 +375,11 @@
 {"message":"Email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es with subject Logs from NOC","level":"low","createdAt":"2026-02-18T12:05:50.568Z","origin":"email.service.ts"}
 {"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-18T12:49:07.936Z","origin":"send-email-logs.ts"}
 {"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-18T23:15:48.766Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:23:49.257Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:29:37.562Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:29:40.703Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:29:46.280Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:37:31.470Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:37:43.206Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T08:43:18.563Z","origin":"send-email-logs.ts"}
+{"message":"Log email sent to brunobenavent@gmail.com,comunicacion@viverosguzman.es","level":"low","createdAt":"2026-02-19T09:53:45.486Z","origin":"send-email-logs.ts"}
