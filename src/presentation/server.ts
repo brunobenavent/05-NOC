@@ -6,10 +6,12 @@ import { FileSystemDatasource } from '../infrastructure/datasources/file-system.
 import { EmailService } from './email/email.service';
 import { SendEmailLogs } from '../domain/use-cases/email/send-email-logs';
 import { MongoLogDatasource } from '../infrastructure/datasources/mongo-log.datasource';
+import { PostgresLogDatasource } from '../infrastructure/datasources/postgre-log.datasource';
 
 const logRepository = new LogRepositoryImpl(
     //new FileSystemDatasource()
-    new MongoLogDatasource()
+    //new MongoLogDatasource()
+    new PostgresLogDatasource()
 )
 const emailService =  new EmailService()
 export class Server {
@@ -20,19 +22,19 @@ export class Server {
          
         new SendEmailLogs(emailService, logRepository).execute(['brunobenavent@gmail.com', 'comunicacion@viverosguzman.es'])
         
-        // CronService.createJob(
-        //     '*/5 * * * * *',
-        //     () => {
-        //         const url = 'https://www.google.com'
-        //         new CheckService(
-        //             logRepository,
-        //             () => console.log(`${url} is ok`),
-        //             (error) => console.log(`${url} is not ok: ${error}`)
+        CronService.createJob(
+            '*/5 * * * * *',
+            () => {
+                const url = 'https://www.google.com'
+                new CheckService(
+                    logRepository,
+                    () => console.log(`${url} is ok`),
+                    (error) => console.log(`${url} is not ok: ${error}`)
 
-        //         ).execute('https://www.google.com')
-        //         //new CheckService().execute('http://localhost:3000')
-        //     }   
-        // );
+                ).execute('https://www.google.com')
+                //new CheckService().execute('http://localhost:3000')
+            }   
+        );
         
     }
 
